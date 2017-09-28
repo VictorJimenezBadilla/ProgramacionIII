@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Compra de las entradas para concierto</title>
+        <h:outputStylesheet library="css" name="estilos.css"/>
+    </h:head>
+    <h:body>
+        <h3>Compra de Entradas</h3>
+        <h:form>
+            
+            <h:panelGrid columns="3"
+                         columnClasses="derecha,izquierda,izquierda">
+                
+                <h:outputLabel value="Nombre:" for="nombre"/>
+                <h:inputText id="nombre" required="true"
+                             value="#{entradasBean.nombre}"/>
+                <h:message for="nombre"/>
+                
+                
+                 <h:outputLabel value="Apellido:" for="apellido"/>
+                <h:inputText id="apellido" required="true"
+                             value="#{entradasBean.apellido}"/>
+                <h:message for="apellido"/>
+                
+                 <h:outputLabel value="Telefono:" for="telefono"/>
+                <h:inputText id="telefono" required="true"
+                             value="#{entradasBean.telefono}"/>
+                <h:message for="telefono"/>
+                
+                 <h:outputLabel value="CantidadEntradas" for="cantidadEntradas"/>
+                <h:inputText id="edad" required="true"
+                             value="#{entradasBean.cantidadEntradas}">
+                           <f:validateDoubleRange minimum="0"  
+                                       maximum="5"  
+                                       />                   
+                </h:inputText>
+                <h:message for="cantidadEntradas"/>
+                
+                
+                 <h:outputLabel value="Cedula" for="cedula"/>
+                <h:inputText id="cedula" required="true"
+                             value="#{entradasBean.cedula}"/>
+                <h:message for="cedula"/>
+                
+                <h:outputLabel value="Graderia" for="graderia"/>
+                <h:inputText id="graderia" required="true"
+                             value="#{entradasBean.graderia}"/>
+                <h:message for="graderia"/>
+                
+                <h:outputLabel value="Cantante" for="cantante"/>
+                <h:inputText id="cantante" required="true"
+                             value="#{entradasBean.cantante}"/>
+                <h:message for="cantante"/>
+                
+                
+                
+                <h:panelGroup>
+                    <h:commandButton id="registro"
+                                     value="Registrar"
+                                     action="confirmacion"/>
+                
+                 </h:panelGroup>
+            </h:panelGrid>
+            </h:form>
+    </h:body>
+</html>
+

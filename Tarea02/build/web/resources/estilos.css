@@ -1,0 +1,11 @@
+.rightalign{
+    text-align: right
+}
+.rightalign-bold{
+    text-align: right;
+    font-weigth: bold;
+}
+.leftalign{
+    text-align: left
+}
+
