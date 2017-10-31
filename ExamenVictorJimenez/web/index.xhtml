@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    
+ 
+    
+    <h:body>
+
+        <h3> REGISTRO DE SOLICITUDES DE SERVICIO TECNICO</h3>
+        <h:form>
+            <h:panelGrid columns="3"
+                         columnClasses="derecha,izquierda,izquierda">
+                
+                <h:outputLabel value="Cliente:" for="cliente"/>
+                <h:inputText id="cliente" required="true"
+                             value="#{datos.cliente}"/>
+                <h:message for="cliente"/>
+                
+                
+                 <h:outputLabel value="DetalleCaso" for="detalleCaso"/>
+                <h:inputText id="detalleCaso" required="true"
+                             value="#{datos.detalleCaso}"/>
+                <h:message for="detalleCaso"/>
+                
+                  <h:outputLabel value="Fecha" for="fecha"/>
+                <h:inputText id="fecha" required="true"
+                             value="#{datos.fecha}"/>
+                <h:message for="fecha"/>
+                
+       
+                <h:panelGroup>
+                    <h:commandButton id="registro"
+                                     value="Registrar"
+                                     action="confirma"/>
+                    
+                  
+                
+                 </h:panelGroup>
+                
+                
+            </h:panelGrid>
+           
+        </h:form>
+        
+        <h:form>  
+                
+  <h:commandButton value="Ver Registros" action="#{administradorSolicitudes.laLista.lista}"/>
+
+                </h:form>
+        
+            
+    </h:body>
+</html>
